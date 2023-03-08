@@ -1,15 +1,17 @@
 .app-nav {
-    grid-area: nav;
-    background-color: #fff;
-    padding: 0 15px;
-    background-color: #ccc;
+    padding: 20px;
 }
 
 .app-nav_link {
+    list-style: none;
+}
+.app-nav_link a {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;;
 }
 
-.app-nav_link.active {
-    text-decoration: underline;
+.app-nav_link a.activeNav {
+    color: green;
 }
+

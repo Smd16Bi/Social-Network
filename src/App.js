@@ -6,29 +6,38 @@ import Main from "./components/main/main";
 import Nav from "./components/navigation/nav";
 
 
+
 import {
   BrowserRouter,
   Route,
   Routes,
 } from 'react-router-dom';
 import News from "./components/news/news";
+import Music from "./components/music/music";
+import Settings from "./components/settings/settings";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header />
-        <Nav />
-        <div className="app-wrapper-main">
+        <header className="app-wrapper-header">
+          <Header />
+        </header>
+        <aside className="app-wrapper-aside">
+          <Nav />
+        </aside>
+        <main className="app-wrapper-main">
           <Routes>
-            <Route path='/profile' element={<Main/>} />
-            <Route path='/dialogs' element={<Dialogs/>} />
-            <Route path='/news' element={<News/>} />
-            <Route path='/music' element={<Dialogs/>} />
-            <Route path='/settings' element={<Dialogs/>} />
+            <Route path='/profile' element={<Main />} />
+            <Route path='/dialogs' element={<Dialogs />} />
+            <Route path='/news' element={<News />} />
+            <Route path='/music' element={<Music />} />
+            <Route path='/settings' element={<Settings />} />
           </Routes>
-        </div>
-        <Footer />
+        </main>
+        <footer className="app-wrapper-footer">
+          <Footer />
+        </footer>
       </div>
     </BrowserRouter>
   )

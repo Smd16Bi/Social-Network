@@ -1,0 +1,9 @@
+.app-main {
+
+}
+
+.app-main img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}

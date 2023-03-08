@@ -1,9 +1,25 @@
-.app-main {
+.app-dialogs {
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+
+    grid-gap: 25px;
+}
+
+.app-main_names {}
+
+.names-item {
+    padding: 10px;
+}
+
+.app-main_messages {}
+
+.messages-item {
+    padding: 10px;
 
 }
 
-.app-main img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
+.names-item._active {
+    color: green;
 }

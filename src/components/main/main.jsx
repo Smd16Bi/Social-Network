@@ -5,7 +5,7 @@ import MyPosts from "./myposts/myposts";
 
 const Main = () => {
   return (
-    <main className={style["app-main"]}>
+    <div className={style["app-main"]}>
       <div className="app-main__wallpaper">
         <img
           src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg"
@@ -22,7 +22,7 @@ const Main = () => {
         <div className="main__description-info">description</div>
       </div>
       <MyPosts />
-    </main>
+    </div>
   );
 };
 
