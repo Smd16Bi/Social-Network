@@ -1,0 +1,10 @@
+.app-header {
+    grid-area: header;
+    background-color: #fff;
+    padding: 40px 15px;
+}
+
+.app-header img {
+    width: 40px;
+    height: 40px;
+}

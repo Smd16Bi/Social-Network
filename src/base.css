@@ -1,0 +1,21 @@
+.app-wrapper {
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+
+    grid-gap: 25px;
+
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+
+    background-color: #ccc;
+}
+
+.app-wrapper-main {
+    grid-area: main;
+    background-color: #fff;
+    padding: 0 15px;
+}
