@@ -3,11 +3,11 @@ import style from "./main.module.css";
 import MyPosts from "./myposts/myposts";
 import MyProfile from "./myprofile/myprofile";
 
-const Main = () => {
+const Main = ({state}) => {
   return (
     <div className={style["app-main"]}>
       <MyProfile />
-      <MyPosts />
+      <MyPosts state={state} />
     </div>
   );
 };

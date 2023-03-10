@@ -16,7 +16,7 @@ import News from "./components/news/news";
 import Music from "./components/music/music";
 import Settings from "./components/settings/settings";
 
-const App = () => {
+const App = ({state}) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -28,8 +28,8 @@ const App = () => {
         </aside>
         <main className="app-wrapper-main">
           <Routes>
-            <Route path='/profile' element={<Main />} />
-            <Route path='/dialogs/*' element={<Dialogs />} />
+            <Route path='/profile' element={<Main state={state} />}  />
+            <Route path='/dialogs/*' element={<Dialogs state={state} />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />

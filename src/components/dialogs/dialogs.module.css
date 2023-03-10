@@ -9,17 +9,6 @@
 
 .app-main_names {}
 
-.names-item {
-    padding: 10px;
-}
 
 .app-main_messages {}
 
-.messages-item {
-    padding: 10px;
-
-}
-
-.names-item._active {
-    color: green;
-}
