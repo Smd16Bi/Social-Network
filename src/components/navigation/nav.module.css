@@ -32,6 +32,10 @@
     flex-direction: column;
     position: relative;
 } 
+
+.app-nav_friend span {
+    color: #fff;
+}
 .app-nav_friend::after {
     position: absolute;
     top: 0;
@@ -45,6 +49,9 @@
 }
 .app-nav_friend.friend_online::after {
     background-color: green;
+}
+.friend_offline {
+
 }
 
 .app-nav_friend img {
