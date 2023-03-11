@@ -1,7 +1,12 @@
 import img1 from "../assets/ava1.jpeg"
 import img2 from "../assets/ava2.jpeg"
 import img3 from "../assets/ava3.jpeg"
+import { nanoid } from 'nanoid'
+import { renderDomTree } from "../render";
 
+function id() {
+    return nanoid();
+}
 
 
 let state = {
@@ -13,38 +18,51 @@ let state = {
     },
     nav: {
         sideBar: [
-            { id: 1, link: "Profie", path: "/profile" },
-            { id: 2, link: "Message", path: "/dialogs" },
-            { id: 3, link: "News", path: "/news" },
-            { id: 4, link: "Music", path: "/music" },
-            { id: 5, link: "Settings", path: "/settings" },
-            { id: 6, link: "Friends", path: "/friends" }
+            { id: id(), link: "Profie", path: "/profile" },
+            { id: id(), link: "Message", path: "/dialogs" },
+            { id: id(), link: "News", path: "/news" },
+            { id: id(), link: "Music", path: "/music" },
+            { id: id(), link: "Settings", path: "/settings" },
+            { id: id(), link: "Friends", path: "/friends" }
         ],
         friends: [
-            { id: 1, name: "Anton", isActive: false, img: img1 },
-            { id: 2, name: "Oksana",isActive: true, img: img2},
-            { id: 3, name: "Dima",isActive: false, img: img3}
+            { id: id(), name: "Anton", isActive: false, img: img1 },
+            { id: id(), name: "Oksana", isActive: true, img: img2 },
+            { id: id(), name: "Dima", isActive: false, img: img3 }
         ]
     },
     dataPosts: {
         post: [
-            { id: 1, message: "Hello world", like: 25 },
-            { id: 2, message: "First post", like: 15 },
+            { id: id(), message: "Hello world", like: 25 },
+            { id: id(), message: "First post", like: 15 },
         ]
     },
     dataDialogs: {
         dialogs: [
-            { id: 1, name: "Anton" },
-            { id: 2, name: "Oksana" },
-            { id: 3, name: "Sasha" },
-            { id: 4, name: "Dima" },
+            { id: id(), name: "Anton" },
+            { id: id(), name: "Oksana" },
+            { id: id(), name: "Sasha" },
+            { id: id(), name: "Dima" },
         ],
         messages: [
-            { id: 1, messege: "Hello" },
-            { id: 2, messege: "World" },
-            { id: 3, messege: "My" },
-            { id: 4, messege: "Name" },
+            { id: id(), messege: "Hello" },
+            { id: id(), messege: "World" },
+            { id: id(), messege: "My" },
+            { id: id(), messege: "Name" },
         ]
     }
 }
+
+export const addPost = (postBody) => {
+    let newPost = {
+        id: id(),
+        message: postBody,
+        like: 0
+    }
+    state.dataPosts.post.push(newPost);
+    postBody = "";
+
+    renderDomTree(state,addPost)
+}
+
 export default state;

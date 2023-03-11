@@ -16,7 +16,7 @@ import News from "./components/news/news";
 import Music from "./components/music/music";
 import Settings from "./components/settings/settings";
 
-const App = ({state}) => {
+const App = ({ state, addPost }) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -24,11 +24,11 @@ const App = ({state}) => {
           <Header />
         </header>
         <aside className="app-wrapper-aside">
-          <Nav  state={state.nav} />
+          <Nav state={state.nav} />
         </aside>
         <main className="app-wrapper-main">
           <Routes>
-            <Route path='/profile' element={<Main state={state.dataPosts} profile={state.profile} />}  />
+            <Route path='/profile' element={<Main state={state.dataPosts} profile={state.profile} addPost={addPost} />} />
             <Route path='/dialogs/*' element={<Dialogs state={state.dataDialogs} />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
