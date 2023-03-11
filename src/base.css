@@ -13,21 +13,17 @@
 
 .app-wrapper-header {
     grid-area: header;
-    background-color: #fff;
 }
 
 .app-wrapper-aside {
     grid-area: nav;
-    background-color: #A8EBFF;
 }
 
 .app-wrapper-main {
     grid-area: main;
-    background-color: #fff;
 }
 
 .app-wrapper-footer {
     grid-area: footer;
-    background-color: #fff;
     padding: 0 15px;
 }

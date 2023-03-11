@@ -1,0 +1,50 @@
+.app-main__wallpaper {
+    position: relative;
+    padding-bottom: 25%;
+}
+.app-main__wallpaper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-main__description {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.main__description-ava {
+    flex: 0 1 33%;
+    border-radius: 4px;
+    position: relative;
+    padding-bottom: 45%;
+}
+.main__description-ava img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main__description-info {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.main__description-info >*:not(:last-child) {
+    margin-bottom: 15px;
+}
+.main__description-info p {
+    margin: 0;
+    padding: 0;
+    color: #F1B10D;
+    font-size: 16px;
+}

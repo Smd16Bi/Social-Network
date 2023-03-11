@@ -1,5 +1,5 @@
 .app-header {
-    background-color: #F5F3EA;
+    background-color: #3F8FB9;
     padding: 15px 40px;
     display: flex;
     align-items: center;
@@ -17,4 +17,5 @@
 .app-header_text h1 {
     text-transform: uppercase;
     font-size: 40px;
+    color: #F1B10D;
 }

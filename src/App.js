@@ -28,7 +28,7 @@ const App = ({state}) => {
         </aside>
         <main className="app-wrapper-main">
           <Routes>
-            <Route path='/profile' element={<Main state={state.dataPosts} />}  />
+            <Route path='/profile' element={<Main state={state.dataPosts} profile={state.profile} />}  />
             <Route path='/dialogs/*' element={<Dialogs state={state.dataDialogs} />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />

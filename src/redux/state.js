@@ -5,6 +5,12 @@ import img3 from "../assets/ava3.jpeg"
 
 
 let state = {
+    profile: {
+        name: "Anton",
+        surname: "Vasylchenko",
+        city: "Konotop",
+        age: 26
+    },
     nav: {
         sideBar: [
             { id: 1, link: "Profie", path: "/profile" },
