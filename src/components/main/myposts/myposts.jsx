@@ -1,4 +1,5 @@
 import React from "react";
+import MainButton from "../../uiComponent/mainButton";
 import style from "./myposts.module.css";
 import Post from "./post/post";
 
@@ -11,8 +12,8 @@ const MyPosts = ({ state }) => {
     <div className={style["app-main__posts"]}>
       <div className={style["app-main__posts-create"]}>
           <textarea cols="30" rows="10"></textarea>
-          <button className={style["app-main__posts-add"]}>add</button>
-          <button className={style["app-main__posts-remove"]}>remove</button>
+          <MainButton slot="Add"/>
+          <MainButton slot="Remove"/>
       </div>
       <div className={style["main__posts-post"]}>{postsUi}</div>
     </div>
