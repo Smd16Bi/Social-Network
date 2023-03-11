@@ -4,8 +4,8 @@ import MessageItem from "./messageItem/messageItem";
 import DialogItem from "./dialogsItem/dialogsItem";
 
 const Dialogs = ({ state }) => {
-  let dialogsData = state.dataDialogs.dialogs;
-  let messagesData = state.dataDialogs.messages;
+  let dialogsData = state.dialogs;
+  let messagesData = state.messages;
 
   let dialogsUI = dialogsData.map((el, index) => {
     return <DialogItem key={index} name={el.name} path={"/dialogs/" + el.id} />;

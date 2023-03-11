@@ -3,7 +3,7 @@ import style from "./myposts.module.css";
 import Post from "./post/post";
 
 const MyPosts = ({ state }) => {
-  let postsData = state.dataPosts.post;
+  let postsData = state;
   let postsUi = postsData.map((el, index) => {
     return <Post key={el.id} message={el.message} like={el.like} />;
   });

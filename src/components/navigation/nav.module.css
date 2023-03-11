@@ -5,13 +5,50 @@
 .app-nav_link {
     list-style: none;
 }
+
 .app-nav_link a {
     color: #fff;
     text-decoration: none;
-    cursor: pointer;;
+    cursor: pointer;
+    ;
 }
 
 .app-nav_link a.activeNav {
     color: green;
 }
 
+.app-nav_friends {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-nav_friends >*:not(:last-child) {
+    margin-right: 15px;
+}
+
+.app-nav_friend {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+} 
+.app-nav_friend::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    border: 1px solid green;
+    background-color: #fff;
+}
+.app-nav_friend.friend_online::after {
+    background-color: green;
+}
+
+.app-nav_friend img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}

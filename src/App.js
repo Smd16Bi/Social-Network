@@ -24,12 +24,12 @@ const App = ({state}) => {
           <Header />
         </header>
         <aside className="app-wrapper-aside">
-          <Nav />
+          <Nav  state={state.nav} />
         </aside>
         <main className="app-wrapper-main">
           <Routes>
-            <Route path='/profile' element={<Main state={state} />}  />
-            <Route path='/dialogs/*' element={<Dialogs state={state} />} />
+            <Route path='/profile' element={<Main state={state.dataPosts} />}  />
+            <Route path='/dialogs/*' element={<Dialogs state={state.dataDialogs} />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />

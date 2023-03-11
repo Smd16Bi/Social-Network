@@ -7,7 +7,7 @@ const Main = ({state}) => {
   return (
     <div className={style["app-main"]}>
       <MyProfile />
-      <MyPosts state={state} />
+      <MyPosts state={state.post} />
     </div>
   );
 };
