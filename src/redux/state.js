@@ -2,12 +2,16 @@ import img1 from "../assets/ava1.jpeg"
 import img2 from "../assets/ava2.jpeg"
 import img3 from "../assets/ava3.jpeg"
 import { nanoid } from 'nanoid'
-import { renderDomTree } from "../render";
 
 function id() {
     return nanoid();
 }
 
+
+function renderDomTree() {
+    // Render DOM(34-35)
+    console.log("render true");
+}
 
 let state = {
     profile: {
@@ -60,9 +64,22 @@ export const addPost = (postBody) => {
         like: 0
     }
     state.dataPosts.post.push(newPost);
-    postBody = "";
-
-    renderDomTree(state,addPost)
+    renderDomTree(state) 
+}
+export const updateMessage = (bodyMessage) => {
+    let newMessage = {
+        id: id(),
+        messege: bodyMessage
+    }
+    state.dataDialogs.messages.push(newMessage);
+    renderDomTree(state) 
 }
 
+
+// Render DOM(34-35)
+export const subscribe = (observer) => {
+    renderDomTree = observer
+}
+
+ 
 export default state;

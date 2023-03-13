@@ -4,7 +4,7 @@ import MessageItem from "./messageItem/messageItem";
 import DialogItem from "./dialogsItem/dialogsItem";
 import MainButton from "../uiComponent/mainButton";
 
-const Dialogs = ({ state }) => {
+const Dialogs = ({ state, updateMessage }) => {
   let dialogsData = state.dialogs;
   let messagesData = state.messages;
   let addMessage = React.createRef();
@@ -16,7 +16,8 @@ const Dialogs = ({ state }) => {
   });
 
   function newMessage() {
-    console.log(addMessage.current.value);
+    updateMessage(addMessage.current.value);
+    addMessage.current.value = "";
   }
 
   return (
@@ -27,7 +28,7 @@ const Dialogs = ({ state }) => {
         <div className={style["app-main_messages-add"]}>
           <textarea ref={addMessage}></textarea>
           <br />
-          <MainButton slot={"add"} func={newMessage} />
+          <MainButton slot={"add"} addPost={newMessage} />
         </div>
       </div>
     </div>
