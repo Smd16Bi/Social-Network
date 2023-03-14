@@ -1,16 +1,18 @@
 import React from "react";
+import { actionCreateAddPost } from "../../../redux/state";
 import MainButton from "../../uiComponent/mainButton";
 import style from "./myposts.module.css";
 import Post from "./post/post";
 
-const MyPosts = ({ state, addPost }) => {
+
+const MyPosts = ({ state, dispatch }) => {
   let postsData = state;
 
   let newPostElement = React.createRef();
 
   let text = () => {
-    let bodyText =  newPostElement.current.value
-    addPost(bodyText);
+    let bodyText = newPostElement.current.value
+    dispatch(actionCreateAddPost(bodyText));
     newPostElement.current.value = "";
   }
 

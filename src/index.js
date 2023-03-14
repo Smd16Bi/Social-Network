@@ -1,6 +1,5 @@
 import React from 'react';
-
-import state, { addPost, store, subscribe, updateMessage } from './redux/state';
+import store from './redux/state';
 import ReactDOM from 'react-dom/client';
 import './style.css';
 import App from './App';
@@ -9,14 +8,15 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const renderDomTree = (state) => {
   root.render(
     <React.StrictMode>
-      <App state={store.getState()} addPost={addPost} updateMessage={updateMessage} />
+      <App
+        dispatch={store.dispatch.bind(store)}
+        state={state}
+      />
     </React.StrictMode>
   );
 }
-renderDomTree(state);
-
-// Render DOM(34-35)
-subscribe(renderDomTree)
+renderDomTree(store.getState());
+store.subscribe(renderDomTree)
 
 
 reportWebVitals();

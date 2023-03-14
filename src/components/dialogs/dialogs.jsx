@@ -3,8 +3,9 @@ import style from "./dialogs.module.css";
 import MessageItem from "./messageItem/messageItem";
 import DialogItem from "./dialogsItem/dialogsItem";
 import MainButton from "../uiComponent/mainButton";
+import { actionCreateNewMessage } from "../../redux/state";
 
-const Dialogs = ({ state, updateMessage }) => {
+const Dialogs = ({ state, dispatch }) => {
   let dialogsData = state.dialogs;
   let messagesData = state.messages;
   let addMessage = React.createRef();
@@ -16,7 +17,7 @@ const Dialogs = ({ state, updateMessage }) => {
   });
 
   function newMessage() {
-    updateMessage(addMessage.current.value);
+    dispatch(actionCreateNewMessage(addMessage.current.value))
     addMessage.current.value = "";
   }
 
